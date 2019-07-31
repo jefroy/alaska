@@ -1,0 +1,128 @@
+/*
+font-family: 'Stylish', sans-serif;
+*/
+
+
+*{ /*reset browser css rules*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{ /*apply our custom css rules*/
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Stylish', sans-serif;
+}
+
+a{ /*styles for anchor tag*/
+    color: white; /*text color*/
+}
+
+ul{ /*styles for unordered lists*/
+    list-style: none;
+}
+
+/*----------------------
+Hero image rules
+----------------------*/
+
+#hero{ /*# = id*/
+    background: gray;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;``
+
+    background-image: url('img/jojo_hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 100vh; /*vh = video height*/
+}
+
+#hero h1, #hero h3{
+    font-size: 28px;
+    text-shadow: 2px 2px #000; /*2 pixels down, 2 pixels to the right, black*/
+    margin-bottom: 40px;
+}
+
+#hero h1{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+#hero a.btn{ /*hero id, anchor tag with the class btn*/
+    color: white;
+    background-color: darkblue;
+    text-decoration: none;
+    padding: 20px 46px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
+    border: 2px solid white;
+}
+
+#hero a.btn:hover{ /*hover state for the btn*/
+    background-color: green;
+}
+
+@media(max-width:800px){
+    #hero{
+        min-height: 600px;
+    }
+    #hero h1{
+        font-size: 30px;
+    }
+    #hero h3{
+        font-size: 20px;
+    }
+    #hero a.btn{ /*hero id, anchor tag with the class btn*/
+        padding: 15px 40px;
+    }
+}
+
+
+/*-------------------
+Footer
+-------------------*/
+footer{
+    background-color: #131622;
+    color: antiquewhite; /*text color*/
+    text-align: center;
+    background: linear-gradient(to bottom, #284e7a, #000 100%); /*to bottom = direction, color1, color2, transparency faade thing percentage*/
+    padding: 60px 0; /*60 pixles on the top and bottom, 0 pixels left and right*/
+
+    display: flex; /*everything in the footer tag can now be edited with flex commands, this forces everything in the footer tag into 1 row*/
+    flex-direction: column; /*changed everything in footer to a column layout instead of a row*/
+    align-items: center; /*everything in the footer tag is now center aligned*/
+}
+footer p{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255,255,255,.6); /*.6 = transparency, rgba where a = alpha */
+    margin-bottom: 10px;
+}
+footer ul{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+}
+footer ul li{
+    margin: 0px 8px;
+}
+footer ul li a{
+    font-size: 36px;
+    cursor: pointer;
+}
+@media(max-width: 800px){
+    footer{
+        padding: 80px 15px;
+    }
+}
