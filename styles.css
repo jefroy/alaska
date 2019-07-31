@@ -37,7 +37,7 @@ Hero image rules
 
     display: flex;
     flex-direction: column;
-    align-items: center;``
+    align-items: center;
 
     background-image: url('img/jojo_hero.jpg');
     background-repeat: no-repeat;
