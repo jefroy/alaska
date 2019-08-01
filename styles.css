@@ -26,6 +26,62 @@ ul{ /*styles for unordered lists*/
     list-style: none;
 }
 
+hr{
+    width: 150px;
+    height: 2px;
+    background-color: blue;
+    border: 0;
+    margin: 40px auto;
+}
+
+#top{
+    background-color: grey;
+}
+
+/*----------------------
+about me rules
+----------------------*/
+
+div h3.title{
+    color: aliceblue;
+    text-transform: capitalize;
+    font-size: 32;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+#about{
+    padding: 10px;
+    background-color: indianred;
+    margin-bottom: 20px;
+}
+#two-cols{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.about-img{
+    border: 4px solid #2196f3;
+    background-color: #2196f3;
+}
+.about-bio{
+    width: 65%;
+    max-width: 800px;
+    line-height: 2;
+    margin-left: 20px;
+}
+@media(max-width:600px){
+    #about, #two-cols{
+        flex-direction: column; /*stack the columns*/
+    }
+    .about-bio{
+        margin-top: 20px;
+        line-height: 1.5;
+        text-align: left;
+    }
+}
+
 /*----------------------
 Hero image rules
 ----------------------*/
