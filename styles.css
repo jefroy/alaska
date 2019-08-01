@@ -39,6 +39,54 @@ hr{
 }
 
 /*----------------------
+gallery
+----------------------*/
+
+#gallery{
+    background-color: grey;
+}
+
+#gallery .grid li{
+    padding: 20px;
+    height: 350px;
+    border-radius: 3px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+}
+
+#gallery ul.grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery .grid li.small{
+    flex-basis: 40%; /*flex space for a child item*/
+}
+
+#gallery .grid li.large{
+    flex-basis: 60%; /*flex space for a child item*/
+}
+
+#gallery p{
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto 35px;
+    padding: 0 20px;
+    line-height: 2;
+}
+
+@media(max-width: 1000px){
+    #gallery .grid li.small,
+    #gallery .grid li.large{
+        flex-basis: 100%;
+    }
+}
+
+/*----------------------
 about me rules
 ----------------------*/
 
