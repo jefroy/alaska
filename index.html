@@ -7,15 +7,26 @@
         <link href="https://fonts.googleapis.com/css?family=Kodchasan|Stylish" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
-        <style>
-/*            notes: #id .class*/
-
-
-
-        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
         <title>Bizarre Webpage</title>
     </head>
     <body id="top">
+        <!-- start lesson 11 - header, nav  -->
+        <header>
+            <h2><a href="#" target="_blank"><img src="img/quote_kira.png" alt="handman"></a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#getting-around">Travel</a></li>
+                    <li><a href="#famous-quotes">Quotes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#social-media">Links</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--end lesson 11 - header, nav  -->
        <!--lesson 4 - hero picture thing  -->
        <div id="hero">
            <div class="bg-img"></div>
@@ -144,7 +155,7 @@
         
         <!--start lesson 10 - contact form-->
         
-        <div class="contact">
+        <div id="contact">
             <h3 class="title">My Studio Location</h3>
             <section class="flexbox-section">
                 <p>Map</p>
@@ -153,13 +164,13 @@
             </section>
         </div>
         
-        <div class="contact-form">
+        <div id="contact-form">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfFpFNlm6gXAdgQHUd_bRQdxLIEoI9kJQ-6OK-b4CDvB-5kUg/viewform?embedded=true" width="100%" height="1250" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
         <!--end lesson 10 - contact form-->
         
         
-        <footer>
+        <footer id="social-media">
             <ul>
                 <li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
                 <li><a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
@@ -170,5 +181,20 @@
             <p>&ldquo; Dazeh &rdquo; <br> &mdash; jj</p> <!--lduo and rduo = fancy quotes; mdash = fancy dash-->
             <p></p>
         </footer>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('a[href^="#"]').on('click',function (e) {e.preventDefault();
+
+                var target = this.hash;
+                var $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top-100
+                }, 900, 'swing', function () {
+                    window.location.hash = target-100;
+                });
+                   });
+            });
+</script>
     </body>
 </html>
