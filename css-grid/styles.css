@@ -12,15 +12,127 @@ body{
     background-color: #131633;
     color: #34495e;
     line-height: 1.5;
+    
+    color: white;
 }
 
 /*
-    header
+    header, nav, footer
 */
 
-#login{}
-#enhance_your_career{}
-#important_stats{}
-#build_apps{}
-#build_games{}
-#build_websites{}
+header{
+    grid-area: header;
+    background-color: dimgray;
+}
+nav{
+    grid-area: nav;
+    background-color: darkviolet;
+}
+footer{
+    grid-area: footer;
+    background-color: crimson;
+}
+@media screen and (min-width:1100px){
+    /*full screen with 3 cols and 2 rows*/
+    main{
+        width: 90%;
+        max-width: 800px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 10vh 4vh 38vh 38vh 10vh;
+        grid-gap: 15px;
+        margin: 0 auto;
+    }
+    #container{
+        grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "login enhance_your_career important_stats"
+            "build_apps build_games build_websites"
+            "footer footer footer"
+    }
+}
+@media screen and (max-width:1100px){
+    /*tab screen/landscape with 2 cols and 3 rows*/
+    main{
+        width: 90%;
+        max-width: 800px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 10vh 4vh 25vh 25vh 25vh 10vh;
+        grid-gap: 15px;
+        margin: 0 auto;
+    }
+    #container{
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "login enhance_your_career"
+            "important_stats build_apps"
+            "build_games build_websites"
+            "footer footer"
+    }
+}
+@media screen and (max-width:500px){
+    /*phone screen/portrait with 1 cols and 4 rows*/
+    main{
+        width: 90%;
+        max-width: 800px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+            10vh    /*header*/
+            6vh     /*nav*/
+            14vh    /*content*/
+            14vh    /*content*/
+            14vh    /*content*/
+            14vh    /*content*/
+            14vh    /*content*/
+            5vh;    /*footer*/
+        grid-gap: 15px;
+        margin: 0 auto;
+    }
+    #container{
+        grid-template-areas: 
+            "header"
+            "nav"
+            
+            "login"
+            "enhance_your_career"
+            "important_stats"
+            "build_apps"
+            "build_games"
+            "build_websites"
+            
+            "footer"
+    }
+}
+
+
+#login{
+    grid-area: login;
+    background-color: red;
+}
+#enhance_your_career{
+    grid-area: enhance_your_career;
+    background-color: blue;
+}
+#important_stats{
+    grid-area: important_stats;
+    background-color: green;
+}
+#build_apps{
+    grid-area: build_apps;
+    background-color: olive;
+}
+#build_games{
+    grid-area: build_games;
+    background-color: chocolate;
+}
+#build_websites{
+    grid-area: build_websites;
+    background-color: mediumaquamarine;
+}
