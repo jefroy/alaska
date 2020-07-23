@@ -168,3 +168,17 @@ header h1{
 .card-blue{
     background-color: #9ebcf5;
 }
+.card-title{
+    color: white;
+    background-color: mediumaquamarine;
+    
+}
+input{
+    width: 85%;
+    color: white;
+    background-color: aliceblue;
+    font-size: 1.25em;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
